@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/myblog.css">
+    <!-- <link rel="stylesheet" href="static/btn2.css"> -->
+    <!-- <link rel="stylesheet" href="static/btn1.css"> -->
+    <link rel="stylesheet" href="static/btn.css">
+    <link rel="stylesheet" href="static/menu1.css">
+    <title>Document</title>
+</head>
+<body>
+  <ul class="menu-bar">
+    <li><a href="{% url 'index' %}" style="--i: 0.25s">Home</a></li>
+    <li><a href="{% url 'contact' %}" style="--i: 0.15s">Contact</a></li>
+    <li><a href="{% url 'about' %}" style="--i: 0.1s">About</a></li>
+    <li><a href="{% url 'service' %}" style="--i: 0.2s">Service</a></li>
+    <li><a href="{% url 'info' %}" style="--i: 0.25s">More info</a></li>
+    <li><a href="{% url 'writeblog' %}" style="--i: 0.25s">Write A Blog</a></li>
+    <li><a href="{% url 'index' %}">Log Out</li>
+  </ul>
+
+    <!--  -->
+
+
+
+  
+
+{% comment %} 
+<a href="{% url 'writeblog' %}">
+  <div class="btne">
+  
+   
+      Write a blog  
+   
+
+  </div>
+</a>
+
+
+
+
+
+<a href="{% url 'index' %}">
+
+  <button class="btn-challenge"><span></span><small><h1>Home</h1></small>
+    <div class="hover-area" >
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="hover-col"></div>
+        <div class="icon-home">
+            <div class="roof roof-1"></div>
+            <div class="roof roof-2"></div>
+            <div class="roof-design roof-design-1"></div>
+            <div class="roof-design roof-design-2"></div>
+            <div class="roof-side roof-side-1"></div>
+            <div class="roof-side roof-side-2"></div>
+            <div class="roof-wall roof-wall-1"></div>
+            <div class="roof-wall roof-wall-2"></div>
+            <div class="wall wall-1"></div>
+            <div class="wall wall-2"></div>
+            <div class="wall wall-3"></div>
+            <div class="wall wall-4"></div>
+            <div class="door"></div>
+            <div class="floor"></div>
+        </div>
+    </div>
+  </button>
+
+</a> {% endcomment %}
+
+
+<!-- 
+<a href="{% url 'index' %}">
+  <div class="btnf">
+  
+    <button style="--content: 'Hover me!';">
+      logout
+    </button>
+
+  </div>
+</a>
+
+ -->
+
+
+
+
+
+     
+    {% for post in posts %} 
+      
+      <dev>
+          <div class="container">
+            <div class="square">
+              <img src={{post.img.url}} class="mask">
+          <div class="h1">title: {{post.title}}</div>
+              <p>Blog No. : {{post.id}}</p>
+              <p>Containt: {{post.content}}</p>
+              <p>Author: {{post.author}}</p>
+              
+              
+              
+          <div><a href="blog_details/{{post.id}}" class="button1">Read More</a></div>
+          <!-- <a href="#" target="_" class="button2">Edit Blog</a></div> -->
+            </div>
+            </div>   
+          </div>
+      </div>
+    {% endfor %}  
+  
+  
+  
+  
+  
+  
+  
+
+</body>
+</html>

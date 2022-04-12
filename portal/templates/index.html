@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/index.css">
+    <link rel="stylesheet" href="static/menu.css">
+	<title>Document</title>
+</head>
+<body>
+
+    {% comment %} <ul class="menu-bar">
+        <li>Watch Now</li>
+        <li>Movies</li>
+        <li>TV Shows</li>
+        <li>Sports</li>
+        <li>Kids</li>
+        <li>Library</li>
+    </ul> {% endcomment %}
+
+    <div class="container">
+        <div class="navbar">
+            <div class="menu">
+                <h3 class="logo"><span>welcome </span>to<span> UBloging</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="main">
+                <header>
+                    <div class="overlay">
+                        <h2 class="title">U<span>Bloging</span></h2>
+                        <p class="description"></a>Thank you for visiting UBloging</p> <br><p>For read or write a blog please signup</u></p>
+                        
+                        <a href="register" class="btn">SignUp / Login</a>
+                </header>
+            </div>
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+        <div class="links">
+            <ul>
+                
+                <li>
+                    <a href="{% url 'about' %}" style="--i: 0.1s">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}" style="--i: 0.15s">Contact</a>
+                </li>
+                <li>
+                    <a href="{% url 'service' %}" style="--i: 0.2s">Service</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}" style="--i: 0.25s">More info</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+	
+    
+
+
+    <script src='static/index.js'></script>
+    
+</body>
+</html>
